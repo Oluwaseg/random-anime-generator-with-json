@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
+  font-family: "Mooli", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 20px;
+  margin: 5px;
+  width: 400px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.heading {
+  margin: 10px;
+  color: #c67700;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  font-family: inherit;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #fcff9e;
+  color: #c67700;
+}
+.btn:disabled {
+  background-color: #c67700;
+  cursor: not-allowed;
+}
+.anime-img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 3px solid #fcff9e;
+}
+.anime-name {
+  margin: 20px;
+  background-color: #c67700;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fcff9e;
+}
+
+.anime-container {
+  display: none;
+}
+
+.anime-container.loading {
+  filter: blur(5px);
+}
+
+.anime-img.loading {
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
